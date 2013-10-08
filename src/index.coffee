@@ -1,6 +1,7 @@
 "use strict"
 
 fs = require 'fs'
+path = require 'path'
 
 plato = require 'plato'
 wrench = require 'wrench'
@@ -26,7 +27,10 @@ _runPlato = (mimosaConfig, options, next) ->
   if files.length > 0
     if logger.isDebug
       logger.debug "Running plato on #{JSON.stringify(files, 0, null)}"
-    plato.inspect files, mimosaConfig.plato.destDirFull, mimosaConfig.plato.options, next
+    plato.inspect files, mimosaConfig.plato.destDirFull, mimosaConfig.plato.options, ->
+      outPath = path.join mimosaConfig.plato.destDirFull, "index.html"
+      logger.info "A Plato JavaScript Source Analysis report is available at [[ #{outPath} ]]"
+      next()
   else
     next()
 
