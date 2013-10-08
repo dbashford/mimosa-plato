@@ -24,6 +24,7 @@ plato:
   destDir: ".mimosa/plato"
   excludeVendor: true
   options:
+    jshint: {}
     exclude: [/\.min\.js$/]
     complexity:
       newmi: true
@@ -36,3 +37,4 @@ plato:
 - `options` - An object, configuration for the wrapped [complexityReport](https://github.com/philbooth/complexityReport.js) tool.
 - `options.exclude` - An array, the regexes provided are combined into a single regex and any file names (absolute) that match the combined regex are excluded from report generation
 - `options.complexity` - An object with boolean entries. See the [complexityReport](https://github.com/philbooth/complexityReport.js#calling-the-library) docs for details on the values.
+- `options.jshint` - A config for jshint.  Set to `false` if you don't wish jshint to be used. jshint configuration (an object with boolean entries) can be placed directly in here. Or you can put a string path relative to project root to your .jshintrc file.
