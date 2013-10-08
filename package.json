@@ -24,8 +24,7 @@
   ],
   "dependencies": {
     "logmimosa": "0.5.0",
-    "plato": "0.6.2",
-    "wrench": "1.5.1"
+    "plato": "0.6.2"
   },
   "license": "MIT",
   "engines": {

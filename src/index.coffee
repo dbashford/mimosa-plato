@@ -4,7 +4,6 @@ fs = require 'fs'
 path = require 'path'
 
 plato = require 'plato'
-wrench = require 'wrench'
 logger = require 'logmimosa'
 
 config = require './config'
