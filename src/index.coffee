@@ -4,14 +4,15 @@ fs = require 'fs'
 path = require 'path'
 
 plato = require 'plato'
-logger = require 'logmimosa'
 
 config = require './config'
 
 files = []
+logger = null
 
 registration = (mimosaConfig, register) ->
   if mimosaConfig.isBuild
+    logger = mimosaConfig.log
     e = mimosaConfig.extensions
     register ['buildFile'], 'afterWrite', _assembleFiles, e.javascript
     register ['postBuild'], 'init', _runPlato
