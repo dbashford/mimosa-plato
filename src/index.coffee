@@ -25,7 +25,7 @@ _assembleFiles = (mimosaConfig, options, next) ->
 
 _runPlato = (mimosaConfig, options, next) ->
   if files.length > 0
-    if logger.isDebug
+    if logger.isDebug()
       logger.debug "Running plato on #{JSON.stringify(files, 0, null)}"
     plato.inspect files, mimosaConfig.plato.destDirFull, mimosaConfig.plato.options, ->
       outPath = path.join mimosaConfig.plato.destDirFull, "index.html"
