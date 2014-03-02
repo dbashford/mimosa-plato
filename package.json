@@ -1,6 +1,6 @@
 {
   "name": "mimosa-plato",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/dbashford/mimosa-plato",
   "author": "David Bashford",
   "description": "Mimosa module for plato static analysis tool",

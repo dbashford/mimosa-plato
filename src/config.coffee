@@ -19,20 +19,20 @@ exports.placeholder = ->
   """
   \t
 
-    # plato:                        # Config for mimosa-plato module
-      # destDir: ".mimosa/plato"    # Location to write plato static analysis report
-      # excludeVendor: true         # Whether or not to exclude files in the vendor.javascripts dir
-      # options:
-        # jshint: {}                # A config for jshint.  Set to `false` if you don't wish jshint
-                                    # to be used. jshint configuration (an object with boolean
-                                    # entries) can be placed directly in here. Or you can put a
-                                    # string path to your .jshintrc file relative to project root.
-        # exclude: [/\\.min\\.js$/] # an array of regexes to match files to exclude from processing
-        # complexity:               # Complexity rule configuration, see:
-                                    # https://github.com/philbooth/complexityReport.js#calling-the-library
-          # newmi: true             # Default complexity rule
-          # trycatch: true          # Default complexity rule
-          # forin: true             # Default complexity rule
+    plato:                        # Config for mimosa-plato module
+      destDir: ".mimosa/plato"    # Location to write plato static analysis report
+      excludeVendor: true         # Whether or not to exclude files in the vendor.javascripts dir
+      options:
+        jshint: {}                # A config for jshint.  Set to `false` if you don't wish jshint
+                                  # to be used. jshint configuration (an object with boolean
+                                  # entries) can be placed directly in here. Or you can put a
+                                  # string path to your .jshintrc file relative to project root.
+        exclude: [/\\.min\\.js$/] # an array of regexes to match files to exclude from processing
+        complexity:               # Complexity rule configuration, see:
+                                  # https://github.com/philbooth/complexityReport.js#calling-the-library
+          newmi: true             # Default complexity rule
+          trycatch: true          # Default complexity rule
+          forin: true             # Default complexity rule
 
   """
 
